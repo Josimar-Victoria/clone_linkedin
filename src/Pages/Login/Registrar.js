@@ -1,11 +1,12 @@
 import { Button } from "@material-ui/core";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { login } from "../../features/UseSlice";
 import { auth } from "../../firebase";
-
+import './styles.css';
 export const Registrar = () => {
-  const [register, setRegister] = useState(true);
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -50,6 +51,12 @@ export const Registrar = () => {
             <p>Mantente al dia de tu mundo profesional</p>
             <form onsubmit={handleRegister}>
               <div className="div__input">
+              <input
+                  type="text"
+                  placeholder="Nombre de usuario"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
                 <input
                   type="text"
                   placeholder="Email"
@@ -79,7 +86,9 @@ export const Registrar = () => {
           </div>
           <p className="login__footer">
             ¿Eres Nuevo en LinkedIn
-            <span onClick={() => setRegister(false)}>Unete ahora</span>
+            <Link to=''>
+            <span>Iniciar secion</span>
+            </Link>
           </p>
         </div>
       </div>

@@ -1,9 +1,16 @@
+.login_gogol{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
 .login{
     width:100%;
     height: 100vh;
     background: white;
     position: relative;
 }
+
 .login__container{
     width: 100%;
     display: flex;

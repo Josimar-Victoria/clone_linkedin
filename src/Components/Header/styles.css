@@ -13,12 +13,13 @@
   justify-content: space-between;
   align-items: center;
 }
-.nav > .logo {
+.nav > .nav_logo .logo {
   width: 48px;
   height: 48px;
   color: #0a66c2;
   object-fit: contain;
 }
+
 .header__buscar {
   height: 33px;
   margin-left: 8px;
